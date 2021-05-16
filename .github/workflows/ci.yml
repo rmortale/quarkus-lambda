@@ -17,7 +17,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Build inside Docker containers
-      - run: mvn package -Pnative
+        run: mvn package -Pnative
 
       - name: Copy packaged lambda to S3 bucket
         run: |
